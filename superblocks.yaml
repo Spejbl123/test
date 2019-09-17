@@ -1,19 +1,9 @@
-
 version: 1
 jobs:
-  build:
+  patata_name:
     image: node
     script:
-    - npm i
-    - npm run build
-  test:
-    image: node
-    script:
-    - npm i
-    - npm run test
-
-stages:
-  - build_and_test:
-      jobs:
-        - build
-        - test
+      - npm install truffle
+      - npm install
+      - ./node_modules/.bin/truffle compile
+      - ./node_modules/.bin/truffle test
