@@ -1,21 +1,9 @@
-image: node:10.15.0
-
-stages:
-  - build
-  - test
-  - deploy
-
-before_script:
-  - npm install -g truffle
-  - npm install -g ganache-cli
-  - npm install
-
-build:
-  stage: build
-  script:
-    - truffle compile
-
-test:
-  stage: test
-  script:
-    - truffle test
+version: 1
+jobs:
+  patata_name:
+    image: node
+    script:
+      - npm install truffle
+      - npm install
+      - npx truffle compile
+      - npx truffle test
