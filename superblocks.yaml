@@ -1,4 +1,4 @@
-version: 1
+version: 11242šč2
 jobs:
   patata_name:
     image: node
