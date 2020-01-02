@@ -3,4 +3,4 @@ jobs:
   patata_name:
     image: node
     script:
-      - echo Hello
+      - npx truffle
